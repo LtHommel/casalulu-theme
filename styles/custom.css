@@ -1,0 +1,15 @@
+.post-meta {
+    color: rgb(187,187,187);
+}
+
+img {
+	margin-top: 1rem;
+}
+
+.post__thumbnail {
+    max-width: 25%;
+    float: right;
+	height: auto;
+    margin-top: 0;
+    margin-left: 1rem;
+}
