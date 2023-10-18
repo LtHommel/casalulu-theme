@@ -7,3 +7,4 @@ Changes on homepage:
 - image top margin of 1rem
 - gray dates on homepage
 - remove RSS link from main frame
+- remove button "Also on micro.blog" from navigation
