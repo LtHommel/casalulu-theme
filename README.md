@@ -12,3 +12,4 @@ Changes on homepage:
 - make main column wider
 - remove "Follow on micro.blog" from profile
 - shrink profile padding
+- bigger avatar
