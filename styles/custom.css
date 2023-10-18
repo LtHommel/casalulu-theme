@@ -17,3 +17,7 @@ img {
 li.h-entry::marker {
 	color: transparent;
 }
+
+#wrapper {
+	max-width: 700px;
+}
