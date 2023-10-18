@@ -8,3 +8,4 @@ Changes on homepage:
 - gray dates on homepage
 - remove RSS link from main frame
 - remove button "Also on micro.blog" from navigation
+- weird little circles are now transparent
