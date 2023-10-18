@@ -1,35 +1,41 @@
 {{ define "main" }}
-<div class="home h-feed">
 
+<div class="home h-feed">
     <ul class="post-list">
         {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") (index .Site.Params
         "archive-paginate" | default 25) }}
+        
         {{ range $paginator.Pages }}
-        <li class="h-entry">
-            {{ if .Title }}
-            <h2 class="p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-            {{ end }}
-
-            <a href="{{ .Permalink }}" class="u-url"><span class="post-meta"><time class="dt-published"
-                        datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006"
-                        }}</time></span></a>
-
-            <div class="entry-preview">
-                {{ if .Params.photos_with_metadata }}
-                {{ $thumbnail := index .Params.photos_with_metadata 0 }}
-                <a href="{{ .RelPermalink }}">
-                    <img class="post__thumbnail" src="{{ $thumbnail.url }}" alt="" loading="lazy" />
-                </a>
+            <li class="h-entry">
+                {{ if .Title }}
+                    <h2 class="p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                 {{ end }}
 
+                <a href="{{ .Permalink }}" class="u-url">
+                    <span class="post-meta">
+                        <time class="dt-published" datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700" }}">
+                            {{ .Date.Format "Jan 2, 2006"}}
+                        </time>
+                    </span>
+                </a>
 
-                <p>
-                    {{ .Summary | truncate 300 }}
-                    <a href="{{ .Permalink }}" class="continue-link">lees verder</a>
-                </p>
-            </div>
-        </li>
+                <div class="entry-preview">
+                    {{ if .Params.photos_with_metadata }}
+                        {{ $thumbnail := index .Params.photos_with_metadata 0 }}
+                        <a href="{{ .RelPermalink }}">
+                            <img class="post__thumbnail" src="{{ $thumbnail.url }}" alt="" loading="lazy" />
+                        </a>
+                    {{ end }}
+
+                    <p>
+                        {{ .Summary | truncate 300 }}
+                        <a href="{{ .Permalink }}" class="continue-link">lees verder</a>
+                    </p>
+                </div>
+                
+            </li>
         {{ end }}
     </ul>
 </div>
+
 {{ end }}
