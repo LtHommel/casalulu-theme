@@ -10,3 +10,5 @@ Changes on homepage:
 - remove button "Also on micro.blog" from navigation
 - weird little circles are now transparent
 - make main column wider
+- remove "Follow on micro.blog" from profile
+- shrink profile padding

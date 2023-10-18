@@ -21,3 +21,7 @@ li.h-entry::marker {
 #wrapper {
 	max-width: 700px;
 }
+
+.profile #wrapper {
+	padding: 60px 0;
+}
