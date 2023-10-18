@@ -6,3 +6,4 @@ Changes on homepage:
 - post titles are smaller than blog title.
 - image top margin of 1rem
 - gray dates on homepage
+- remove RSS link from main frame
